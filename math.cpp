@@ -9,8 +9,8 @@ export import :arithmetic;
 namespace hn::math
 {
 	export template <typename T>
-	void print()
+	void print(T number)
 	{
-		std::cout << "The number is: " << "\n";
+		std::cout << "The number is: " << number <<  "\n";
 	}
 }
