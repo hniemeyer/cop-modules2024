@@ -8,23 +8,9 @@ export import :arithmetic;
 
 namespace hn::math
 {
-	export int add(int a, int b)
+	export template <typename T>
+	void print()
 	{
-		return a + b;
-	}
-
-	export int subtract(int a, int b)
-	{
-		return a - b;
-	}
-
-	export int multiply(int a, int b)
-	{
-		return a * b;
-	}
-
-	export int divide(int a, int b)
-	{
-		return a / b;
+		std::cout << "The number is: " << "\n";
 	}
 }
