@@ -1,4 +1,4 @@
-﻿import math;
+﻿import hn.math;
 
 #include <iostream>
 

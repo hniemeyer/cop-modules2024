@@ -13,6 +13,7 @@ target_sources(math
   PUBLIC
     FILE_SET CXX_MODULES FILES
       math.cpp
+      math_arithmetic.cpp
 )
 # Create an executable
 add_executable(hello main.cpp)

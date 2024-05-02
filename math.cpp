@@ -3,7 +3,8 @@ module;
 #include <iostream>
 
 // first thing after the Global module fragment must be a module command
-export module math;
+export module hn.math;
+export import :arithmetic;
 
 namespace hn::math
 {
