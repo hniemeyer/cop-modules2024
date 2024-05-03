@@ -1,20 +1,23 @@
 ﻿cmake_minimum_required(VERSION 3.28)
 project(copmodules2024 CXX)
 
-# Turning off extensions avoids and issue with the clang 16 compiler
-# clang 17 and greater can avoid this setting
 set(CMAKE_CXX_EXTENSIONS OFF)
-# Set the version of C++ for the project
 set(CMAKE_CXX_STANDARD 23)
-# Create a library
-add_library(math)
-# Add the module file to the library
-target_sources(math
-  PUBLIC
-    FILE_SET CXX_MODULES FILES
-      math.cpp
-      math_arithmetic.cpp
+
+Include(FetchContent)
+
+FetchContent_Declare(
+  Catch2
+  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+  GIT_TAG        v3.4.0 # or a later release
 )
-# Create an executable
-add_executable(hello main.cpp)
-target_link_libraries(hello math)
+
+FetchContent_MakeAvailable(Catch2)
+list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
+
+include(CTest)
+include(Catch)
+
+add_subdirectory(math)
+add_subdirectory(app)
+add_subdirectory(math_test)
