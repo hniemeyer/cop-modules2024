@@ -1,5 +1,5 @@
 ﻿cmake_minimum_required(VERSION 3.28)
-project(std_module_example CXX)
+project(copmodules2024 CXX)
 
 # Turning off extensions avoids and issue with the clang 16 compiler
 # clang 17 and greater can avoid this setting
@@ -13,6 +13,7 @@ target_sources(math
   PUBLIC
     FILE_SET CXX_MODULES FILES
       math.cpp
+      math_arithmetic.cpp
 )
 # Create an executable
 add_executable(hello main.cpp)

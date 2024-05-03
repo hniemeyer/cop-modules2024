@@ -3,27 +3,14 @@ module;
 #include <iostream>
 
 // first thing after the Global module fragment must be a module command
-export module math;
+export module hn.math;
+export import :arithmetic;
 
 namespace hn::math
 {
-	export int add(int a, int b)
+	export template <typename T>
+	void print(T number)
 	{
-		return a + b;
-	}
-
-	export int subtract(int a, int b)
-	{
-		return a - b;
-	}
-
-	export int multiply(int a, int b)
-	{
-		return a * b;
-	}
-
-	export int divide(int a, int b)
-	{
-		return a / b;
+		std::cout << "The number is: " << number <<  "\n";
 	}
 }
