@@ -5,4 +5,4 @@ target_sources(math
     FILE_SET CXX_MODULES FILES
       math.cpp
       math_arithmetic.cpp
-)
+      math_print.cpp)
