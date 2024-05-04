@@ -4,7 +4,6 @@ module;
 #include <algorithm>
 
 export module hn.math:statistics;
-import :concepts;
 
 namespace hn::math
 {
