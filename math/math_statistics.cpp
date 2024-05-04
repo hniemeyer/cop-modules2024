@@ -3,7 +3,7 @@ module;
 #include <ranges>
 #include <algorithm>
 
-export module hn.math:arithmetic;
+export module hn.math:statistics;
 import :concepts;
 
 namespace hn::math

@@ -1,6 +1,6 @@
 module;
 
 export module hn.math;
-export import :arithmetic;
+export import :statistics;
 export import :print;
 export import :concepts;

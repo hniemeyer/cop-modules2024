@@ -4,6 +4,6 @@ target_sources(math
   PUBLIC
     FILE_SET CXX_MODULES FILES
       math.cpp
-      math_arithmetic.cpp
+      math_statistics.cpp
       math_print.cpp
       math_concepts.cpp)
