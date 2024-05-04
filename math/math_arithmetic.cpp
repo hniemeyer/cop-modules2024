@@ -1,30 +1,18 @@
+module;
+
+#include <ranges>
+#include <algorithm>
 
 export module hn.math:arithmetic;
 import :concepts;
 
 namespace hn::math
 {
-	export template <number T>
-	constexpr T add(const T a, const T b)
+	export template <std::ranges::forward_range R>
+	auto average(R&& r)
 	{
-		return a + b;
+		using T = std::ranges::range_value_t<R>;
+		return std::ranges::fold_left(r, T{}, std::plus{}) / std::ranges::size(r);
 	}
 
-	export template <number T>
-	constexpr T subtract(const T a, const T b)
-	{
-		return a - b;
-	}
-
-	export template <number T>
-	constexpr T multiply(const T a, const T b)
-	{
-		return a * b;
-	}
-
-	export template <number T>
-	constexpr T divide(const T a, const T b)
-	{
-		return a / b;
-	}
 }

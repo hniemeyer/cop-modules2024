@@ -3,14 +3,10 @@
 
 import hn.math;
 
-TEST_CASE("check_add") {
-	CHECK_EQ(hn::math::add(5, 6), 11);
-	CHECK_EQ(hn::math::add(5.1, 6.2), doctest::Approx(11.3));
-}
-
-TEST_CASE("check_subtract")
+TEST_CASE("check_average")
 {
-	CHECK_EQ(hn::math::subtract(5, 6), -1);
-	CHECK_EQ(hn::math::subtract(5.1, 6.2), doctest::Approx(-1.1));
+	std::vector<int> v = { 1, 2, 3, 4, 5 };
+	CHECK_EQ(hn::math::average(v), 3);
+	std::vector<double> w = { 1.1, 2.2, 3.3, 4.4, 5.5 };
+	CHECK_EQ(hn::math::average(w), doctest::Approx(3.3));
 }
-
