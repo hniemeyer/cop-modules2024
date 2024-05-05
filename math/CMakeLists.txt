@@ -1,4 +1,4 @@
-add_library(math)
+add_library(math blub_impl.cpp)
 # Add the module file to the library
 target_sources(math
   PUBLIC
@@ -6,4 +6,5 @@ target_sources(math
       math.cpp
       math_statistics.cpp
       math_print.cpp
-      math_concepts.cpp)
+      math_concepts.cpp
+      blub.cpp)
