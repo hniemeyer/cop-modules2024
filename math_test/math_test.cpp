@@ -13,7 +13,7 @@ TEST_CASE("check_average")
 
 TEST_CASE("check_distance")
 {
-	hn::math::Point p1 = { 1., 2. };
-	hn::math::Point p2 = { 1.1, 2.2 };
+	constexpr hn::math::Point p1 = { 1., 2. };
+	constexpr hn::math::Point p2 = { 1.1, 2.2 };
 	CHECK_EQ(hn::math::distance(p1, p2), doctest::Approx(0.223607));
 }
