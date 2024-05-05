@@ -1,3 +1,16 @@
+module;
+
+#include <vector>
+
 export module hn.math:blub;
 
-export int blub(int a);
+namespace hn::math {
+	export struct Point
+	{
+		double x;
+		double y;
+	};
+
+	export double distance(const Point& a, const Point& b);
+
+}
