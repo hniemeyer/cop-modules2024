@@ -2,7 +2,7 @@ module;
 
 #include <vector>
 
-export module hn.math:blub;
+export module hn.math:geometry;
 
 namespace hn::math {
 	export struct Point

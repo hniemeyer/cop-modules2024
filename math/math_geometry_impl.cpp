@@ -1,9 +1,5 @@
-module;
-
-#include <cmath>
-
-module blub;
 import hn.math;
+#include <cmath>
 
 namespace hn::math {
 	double distance(const Point& a, const Point& b)
