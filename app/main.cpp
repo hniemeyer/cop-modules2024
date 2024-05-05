@@ -1,13 +1,13 @@
 ﻿import hn.math;
 
-#include <iostream>
+#include <vector>
 
 int main()
 {
-	constexpr int a = 10;
-	constexpr int b = 5;
-
-	hn::math::print(hn::math::add(a, b));
-
+	const std::vector a = { 1., 2., 3., 4., 5. };
+	hn::math::print(hn::math::average(a));
+	constexpr hn::math::Point p1 = { 1., 2. };
+	constexpr hn::math::Point p2 = { 1.1, 2.2 };
+	hn::math::print(hn::math::distance(p1, p2));
 	return 0;
 }
