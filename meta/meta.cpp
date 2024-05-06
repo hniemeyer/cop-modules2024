@@ -21,8 +21,8 @@ namespace hn::meta {
 
 	export using l3 = metal::insert<l2, metal::number<1>, floaty>;
 
-	template<class x, class y>
-	using smaller = metal::number<(sizeof(x) < sizeof(y))>;
+	template<class X, class Y>
+	using smaller = metal::number<(sizeof(X) < sizeof(Y))>;
 
 	export using sorted = metal::sort<l3, metal::lambda<smaller>>;
 
