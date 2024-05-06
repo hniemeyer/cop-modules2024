@@ -1,6 +1,6 @@
-﻿import hn.math;
+﻿#include <vector>
 
-#include <vector>
+import hn.math;
 
 int main()
 {
