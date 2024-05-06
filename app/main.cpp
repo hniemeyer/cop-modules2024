@@ -1,6 +1,8 @@
 ﻿#include <vector>
+#include <iostream>
 
 import hn.math;
+import hn.meta;
 
 int main()
 {
@@ -9,5 +11,6 @@ int main()
 	constexpr hn::math::Point p1 = { 1., 2. };
 	constexpr hn::math::Point p2 = { 1.1, 2.2 };
 	hn::math::print(hn::math::distance(p1, p2));
+	std::cout << "This is a cool type: " << typeid(hn::meta::sorted).name() << std::endl;
 	return 0;
 }

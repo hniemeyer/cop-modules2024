@@ -19,5 +19,6 @@ FetchContent_MakeAvailable(doctest)
 include(CTest)
 
 add_subdirectory(math)
+add_subdirectory(meta)
 add_subdirectory(app)
 add_subdirectory(math_test)
