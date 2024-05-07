@@ -17,3 +17,10 @@ TEST_CASE("check_distance")
 	constexpr hn::math::Point p2 = { 1.1, 2.2 };
 	CHECK_EQ(hn::math::distance(p1, p2), doctest::Approx(0.223607));
 }
+
+TEST_CASE("check_make_point")
+{
+	const auto [x, y] = hn::math::make_point(1., 2.);
+	CHECK_EQ(x, 1.);
+	CHECK_EQ(y, 2.);
+}

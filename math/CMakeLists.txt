@@ -1,5 +1,5 @@
 # module implementation unit MUST NOT be part of the FILE_SET CXX_MODULES (strange error messages)
-add_library(math math_geometry_impl.cpp)
+add_library(math)
 # Add the module file to the library
 target_sources(math
   PUBLIC
