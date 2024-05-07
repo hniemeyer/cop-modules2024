@@ -17,6 +17,6 @@ namespace hn::math
 {
 	Point make_point(const double x, const double y)
 	{
-		return Point{ x, y + 6.0 };
+		return Point{ x, y };
 	}
 }
