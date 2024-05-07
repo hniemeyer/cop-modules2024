@@ -24,7 +24,7 @@ namespace hn::meta {
 
 	using l3 = metal::append<l2, blubby>;
 
-	export using l4 = metal::insert<l3, metal::number<1>, floaty>;
+	using l4 = metal::insert<l3, metal::number<1>, floaty>;
 
 	template<class X, class Y>
 	using smaller = metal::number<(sizeof(X) < sizeof(Y))>;
