@@ -24,3 +24,10 @@ TEST_CASE("check_make_point")
 	CHECK_EQ(x, 1.);
 	CHECK_EQ(y, 2.);
 }
+
+TEST_CASE("check_circle")
+{
+	const auto circle = hn::math::Cirlcle{ hn::math::make_point(1., 2.), 1. };
+	std::vector points = { hn::math::make_point(1., 2.), hn::math::make_point(1.1, 2.2) };
+	CHECK(hn::math::all_points_in_circle(points, circle));
+}
